@@ -24,6 +24,7 @@ pub enum Architecture {
     S390x,
     Sparc64,
     Wasm32,
+    Music,
 }
 
 impl Architecture {
@@ -52,6 +53,7 @@ impl Architecture {
             Architecture::S390x => Some(AddressSize::U64),
             Architecture::Sparc64 => Some(AddressSize::U64),
             Architecture::Wasm32 => Some(AddressSize::U32),
+            Architecture::Music => Some(AddressSize::U64),
         }
     }
 }

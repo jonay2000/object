@@ -58,6 +58,8 @@ pub struct Object<'a> {
     format: BinaryFormat,
     architecture: Architecture,
     endian: Endianness,
+    /// elf type
+    pub elf_type: u16,
     sections: Vec<Section<'a>>,
     standard_sections: HashMap<StandardSection, SectionId>,
     symbols: Vec<Symbol>,
@@ -79,6 +81,7 @@ impl<'a> Object<'a> {
             format,
             architecture,
             endian,
+            elf_type: crate::elf::ET_REL,
             sections: Vec::new(),
             standard_sections: HashMap::new(),
             symbols: Vec::new(),

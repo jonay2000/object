@@ -579,6 +579,9 @@ pub const EM_LOONGARCH: u16 = 258;
 /// Digital Alpha
 pub const EM_ALPHA: u16 = 0x9026;
 
+/// Music architecture
+pub const EM_MUSIC: u16 = 0x1234;
+
 // Values for `FileHeader*::e_version` and `Ident::version`.
 /// Invalid ELF version.
 pub const EV_NONE: u8 = 0;
@@ -4254,6 +4257,11 @@ pub const R_MSP430_16_BYTE: u32 = 5;
 
 /// Direct 32 bit
 pub const R_HEX_32: u32 = 6;
+
+// Music values for `Rel*::r_Type`.
+
+/// Direct 32 bit
+pub const R_MUSIC_64: u32 = 0x123456;
 
 // ARM values for `Rel*::r_type`.
 
